@@ -3,7 +3,7 @@
 # vim:fenc=gb18030
 
 """
-010072010045010072010099CRF
+crf++ impletemention
 """
 from nnlayer import CrfLayer
 from nnlayer import WideEmbedding
@@ -98,5 +98,3 @@ class PureCrf(nn.Module):
         feats = x.view(step_num, batch_num, -1)
         return feats
 
-if __name__ == "__main__":
-    pass
