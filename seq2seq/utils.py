@@ -1,10 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: gb18030 -*-
 # vim:fenc=gb18030
-#
-# Copyright @ 2017 bookerbai <bookerbai@tencent.com>
-#
-# Distributed under terms of the Tencent license.
 
 import json, codecs
 import torch
@@ -53,7 +49,7 @@ def get_bleu(hypotheses, reference):
 
 
 class ModelConfig():
-    """加载model的参数
+    """¼ÓÔØmodelµÄ²ÎÊý
     """
     def __init__(self, config_path):
         self.cfg = json.load(open(config_path, "r"))
@@ -104,7 +100,7 @@ class FileReader():
         return self.word_map
 
     def read(self, sample_num = -1):
-        """ -1 表示读取全部
+        """ -1 ±íÊ¾¶ÁÈ¡È«²¿
         """
         #res[0] = src, #res[1] = target
         source = []
@@ -144,7 +140,7 @@ class FileReader():
         return [source, target], not line
 
 class Seq2SeqDataset():
-    """生成dataset
+    """Éú³Édataset
     """
     def __init__(self, file_path, word_map = None):
         self.data_buf = []
@@ -175,7 +171,7 @@ class Seq2SeqDataset():
 
 
 class Seq2SeqDataLoader():
-    """seq2seq batch 数据生成
+    """seq2seq batch Êý¾ÝÉú³É
     """
     def __init__(self, dataset, batch_size=1, shuff=True, pad=0):
         self.dataset = dataset

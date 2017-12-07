@@ -1,10 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: gb18030 -*-
 # vim:fenc=gb18030
-#
-# Copyright @ 2017 bookerbai <bookerbai@tencent.com>
-#
-# Distributed under terms of the Tencent license.
 
 import torch
 import torch.nn as nn
